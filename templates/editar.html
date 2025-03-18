@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-3">
+    <h2 class="text">Editar produto</h2>
+</div>
+
+<!-- FORMULARIO -->
+<div class="container mt-4">
+    <form action="{{ url_for('atualizar_produto', id=produto.id) }}" method="POST">
+        <div class="mb-3">
+            <label for="txtDescricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control" id="txtDescricao" name="txtDescricao"
+                value="{{ produto.descricao }}" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label for="txtQtd" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="txtQtd" name="txtQtd" value="{{ produto.qtd }}" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label for="txtValidade" class="form-label">Validade</label>
+            <input type="date" class="form-control" id="txtValidade" name="txtValidade" value="{{ produto.validade }}"
+                required><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+<div class="container mt-4">
+    <a class="btn btn-warning" href="{{ url_for('lista_produtos') }}">❌CANCELAR e VOLTAR</a>
+</div>
+<br><br>
+<div class="container mt-5">
+    <form action="{{ url_for('deletar_produto', id=produto.id) }}" method="POST"
+        onsubmit="return confirm('Tem certeza que deseja excluir este produto?');">
+        <button type="submit" class="btn btn-danger">Excluir Produto</button>
+    </form>
+</div>
+{% endblock %}

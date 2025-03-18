@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">➕ Cadastrar Novo Usuário</h2>
+    
+    <form action="{{ url_for('cadastrar_usuario') }}" method="POST" class="mt-4">
+        <div class="mb-3">
+            <label for="username" class="form-label">Nome de Usuário</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="role" class="form-label">Privilégio</label>
+            <select class="form-select" id="role" name="role" required>
+                <option value="user">Usuário</option>
+                <option value="admin">Administrador</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success mr-2 mt-4">➕Cadastrar</button>
+        
+        <a href="{{ url_for('usuarios') }}" class="btn btn-warning mt-4 mx-4">❌CANCELAR</a>
+    </form>
+</div>
+{% endblock %}

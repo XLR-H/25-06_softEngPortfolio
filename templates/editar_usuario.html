@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-3">
+    <h2 class="text">Editar Usuário</h2>
+</div>
+
+<!-- FORMULARIO -->
+<div class="container mt-4">
+    <form action="{{ url_for('atualizar_usuario', id=usuario.id) }}" method="POST">
+        <div class="mb-3">
+            <label for="txtUserName" class="form-label">Nome de Usuário</label>
+            <input type="text" class="form-control" id="txtUserName" name="username" value="{{ usuario.username }}"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label for="txtRole" class="form-label">Privilégio</label>
+            <select class="form-select" id="role" name="role" required>
+                <option value="admin" {% if usuario.role=='admin' %}selected{% endif %}>Admin</option>
+                <option value="user" {% if usuario.role=='user' %}selected{% endif %}>User</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+</div>
+<br><br>
+<div class="container mt-4">
+    <a class="btn btn-warning" href="{{ url_for('usuarios') }}">❌CANCELAR</a>
+</div>
+<br><br>
+<div class="container mt-4">
+    <form action="{{ url_for('deletar_usuario', id=usuario.id) }}" method="POST"
+        onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');">
+        <button type="submit" class="btn btn-danger">Excluir Usuário</button>
+    </form>
+</div>
+{% endblock %}
