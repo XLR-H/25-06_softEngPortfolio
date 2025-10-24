@@ -10,13 +10,8 @@ app = Flask(__name__)
 
 #config banco
 app.config['SQLALCHEMY_DATABASE_URI'] = \
-    'postgres://{usuario}:{senha}@{hostname}:{porta}/{database}'.format(
-        usuario = 'xl_log_db_user',
-        senha = 'DLnjKtQNtasPJ3ttpc8CzneBWVW2Xo3c',
-        hostname = 'dpg-cvd36qbv2p9s73cb2l10-a',
-        porta = '5432',
-        database = 'xl_log_db'
-    )
+    'postgresql+psycopg2://xl_log_db_user:1234@localhost:5432/xl_log_db'
+
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Evita avisos sobre modificações
 
