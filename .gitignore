@@ -1,0 +1,26 @@
+# === AMBIENTE VIRTUAL E VARIÁVEIS ===
+venv/
+.env/
+
+# === ARQUIVOS PYTHON COMPILADOS ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === BANCOS DE DADOS LOCAIS ===
+*.db
+*.sqlite3
+
+# === CONFIGURAÇÕES DE IDE ===
+.vscode/
+.idea/
+
+# === LOGS E CACHE ===
+*.log
+*.bak
+*.tmp
+
+# === ARQUIVOS DO SISTEMA ===
+.DS_Store
+Thumbs.db
