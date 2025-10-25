@@ -86,6 +86,4 @@ Repositório: XL-Log Portfólio
 * Artigo Atlassian — Como Usar o Kanban no GitHub para Melhorar a Produtividade.
 
 
-alo alo testando
-tenho que fazer mais 6 commits :( pq Deus?
-pato no tucupi
+o trabalho foi um sucesso, estou agora fazendo os commits
