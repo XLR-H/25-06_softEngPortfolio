@@ -84,3 +84,6 @@ Repositório: XL-Log Portfólio
 * Pressman, R. S. — Engenharia de Software: Uma Abordagem Profissional.
 * Documentação Oficial do GitHub Actions
 * Artigo Atlassian — Como Usar o Kanban no GitHub para Melhorar a Produtividade.
+
+
+alo alo testando
